@@ -1,0 +1,37 @@
+﻿@using Landlord.Models.Shared
+@model IEnumerable<MenuItemViewModel>
+
+<nav class="menu">
+    <ul class="row">
+        @foreach (var item in Model)
+        {
+            <li class="col-12 col-md-4 menu-list-item @(item.SubMenu == null ? "" : "has-children") ">
+                <span class="menu-link-wrapper">
+                    <a href="@item.Url" class="menu-link">@item.Text</a>
+                </span>
+                @if (item.SubMenu != null)
+                {
+                    <ul class="sub-menu-container">
+                        @foreach (var subItem in item.SubMenu)
+                        {
+                            <li class="sub-menu-list-item">
+                                <span class="sub-menu-link">@subItem.Text</span>
+                                @if (subItem.SubMenu != null)
+                                {
+                                    <ul class="product-sub-menu-container">
+                                        @foreach (var product in subItem.SubMenu)
+                                        {
+                                            <li class="product-sub-menu-link">
+                                                <a href="@product.Url">@product.Text</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+</nav>

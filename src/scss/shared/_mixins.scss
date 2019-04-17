@@ -1,0 +1,65 @@
+@mixin mobile() {
+
+    @media all and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin below($breakpoint) {
+
+    @media all and (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin above($breakpoint) {
+
+    @media all and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin between($lowerbreakpoint, $upperbreakpoint) {
+
+    @media (min-width: $lowerbreakpoint) and (max-width: $upperbreakpoint) {
+        @content;
+    }
+}
+
+@mixin nav-lines-mobile($color) {
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        background: $color;
+        margin: auto;
+        width: 100%;
+   }
+
+   &:after {
+        display: none;
+   }
+
+   &:last-child {
+       
+        &:after {
+           display: block;
+       }
+   }
+
+   a {
+       display: block;
+   }
+}
+
+@mixin nav-lines($right) {
+    content: '';
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: $right;
+    background: $black;
+}

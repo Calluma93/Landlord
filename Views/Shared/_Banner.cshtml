@@ -1,0 +1,18 @@
+﻿@model Landlord.Models.Shared.PageViewModel
+
+<div class="row">
+    <div class="col-12">
+        <div class="banner">
+            <div class="desktop-banner"><img src="@Model.BannerImage.ImageUrl" alt="@Model.BannerImage.Title" /></div>
+            <div class="mobile-banner"><img src="@Model.MobileBannerImage.ImageUrl" alt="@Model.MobileBannerImage.Title" /></div>
+            <div class="overlay-wrapper">
+                <h1 class="heading">
+                    @Model.Heading
+                </h1>
+                <h2 class="subheading">
+                    @Model.SubHeading
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+﻿@model Landlord.Models.Support.SupportPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+<div class="container-fluid support-page-container">
+    @Html.Partial("_Banner", Model)
+
+    <div class="container support">
+        <ul class="row">
+            @foreach (var product in Model.Products)
+            {
+                <li class="col-12 col-md-4 col-lg-3 support-product">
+                    <div class="row support-product-image">
+                        <a href="@product.LinkUrl">
+                            <img class="lazy" data-src="@product.SupportPageImage.ImageUrl" alt="@product.SupportPageImage.Title" />
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <h3>
+                            @product.ProductName
+                        </h3>
+                        <h5>
+                            @product.SubHeading
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 download-links">
+                            <a href="@product.DownloadLink.DownloadLinkUrl" download>
+                                <img class="lazy" data-src="@product.DownloadLink.Image.ImageUrl" alt="@product.DownloadLink.Image.Title" />
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

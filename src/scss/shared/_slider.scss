@@ -1,0 +1,58 @@
+.slick-track{
+
+    .slick-slide {
+
+        img {
+            display: inline;
+        }
+    }
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    margin-top: -25px;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    width: 40px;
+    height: 50px;
+    background-size: 30px 30px;
+    border: none;
+    -webkit-transition: all, .2s, ease-in-out;
+    -moz-transition: all, .2s, ease-in-out;
+    transition: all, .2s, ease-in-out;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev {
+    left: 0;
+    z-index: 1;
+}
+
+.slick-prev:after, .slick-next:after {
+    color: #fff;
+    display: block;
+    font-size: 28px;
+}
+.slick-prev:after {
+    content: "\f104";
+    font-family: FontAwesome;
+    font-size: 3rem;
+}
+.slick-next:after {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-size: 3rem;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #151515;
+}

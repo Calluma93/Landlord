@@ -1,0 +1,49 @@
+﻿@using Landlord.Models.Product
+@model IEnumerable<ContentViewModel>
+
+<ul>
+    @foreach (var section in Model)
+    {
+        if (section is HeadingViewModel)
+        {
+            HeadingViewModel heading = (HeadingViewModel)section;
+
+            <li class="">
+                <h2>
+                    @heading.Text
+                </h2>
+            </li>
+        }
+        else if (section is DescriptionViewModel)
+        {
+            DescriptionViewModel description = (DescriptionViewModel)section;
+
+            <li class="">
+                <p>
+                    @description.Text
+                </p>
+            </li>
+        }
+        else if (section is SubHeadingViewModel)
+        {
+            SubHeadingViewModel subHeading = (SubHeadingViewModel)section;
+
+            <li class="">
+                <h4>
+                    @subHeading.Text
+                </h4>
+            </li>
+        }
+        else if (section is ParagraphViewModel)
+        {
+            ParagraphViewModel paragraph = (ParagraphViewModel)section;
+
+            <li class="">
+                <p>
+                    @paragraph.Text
+                </p>
+            </li>
+        }
+    }
+</ul>
+

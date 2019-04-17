@@ -1,0 +1,43 @@
+.lg-outer {
+
+    .lg-actions .lg-next:before {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-size: 3rem;
+    }
+    
+    .lg-actions .lg-prev {
+        left: 20px;
+    }
+    
+    .lg-actions .lg-prev:after {
+        content: "\f104";
+        font-family: FontAwesome;
+        font-size: 3rem;
+    }
+    
+    .lg-toolbar .lg-close:after {
+        content: "\f00d";
+        font-family: FontAwesome;
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+
+    .lg-toolbar .lg-download:after {
+        content: "\f019";
+        font-family: FontAwesome;
+        font-size: 1.2rem;
+        font-weight: 100;
+      }
+}
+
+.lg-on {
+
+    .lg-backdrop.in {
+        opacity: 0.8;
+    }
+
+    .lg-sub-html {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}

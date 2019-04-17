@@ -1,0 +1,22 @@
+// ###### Not Found ###### \\
+.not-found {
+    display: flex;
+    min-height: 74vh;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    a {
+        text-decoration: underline;
+        color: $black;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}

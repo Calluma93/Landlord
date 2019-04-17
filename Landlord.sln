@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Web
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Landlord", "Landlord\Landlord.csproj", "{2BD1B2AD-715D-4EA3-ACE3-0E57D24C31A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{40ACAE63-0C29-4B54-9D9C-E244C230EF43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD1B2AD-715D-4EA3-ACE3-0E57D24C31A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD1B2AD-715D-4EA3-ACE3-0E57D24C31A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD1B2AD-715D-4EA3-ACE3-0E57D24C31A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD1B2AD-715D-4EA3-ACE3-0E57D24C31A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40ACAE63-0C29-4B54-9D9C-E244C230EF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40ACAE63-0C29-4B54-9D9C-E244C230EF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40ACAE63-0C29-4B54-9D9C-E244C230EF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40ACAE63-0C29-4B54-9D9C-E244C230EF43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

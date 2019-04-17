@@ -1,0 +1,54 @@
+﻿@model Landlord.Models.Product.ProductPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+<div class="container-fluid product">
+    <div class="banner">
+        <img src="@Model.Product.ProductBanner.ImageUrl" alt="@Model.Product.ProductBanner.Title" />
+        <div class="overlay-wrapper">
+            <h1>@Model.Product.ProductName</h1>
+            <h2>@Model.Product.SubHeading</h2>
+            <p>@Model.Product.ProductBannerBlurb</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mobile-headings">
+            <div class="col-12"><h2>@Model.Product.ProductName</h2></div>
+            <div class="col-12"><h3>@Model.Product.SubHeading</h3></div>
+            <div class="col-12"><p>@Model.Product.ProductBannerBlurb</p></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-6 content order-last">
+
+                <div class="row">
+                    @Html.Partial("_Content", Model.Product.Content)
+                </div>
+
+                <div class="row">
+                    <h4>Technical Specs</h4>
+                </div>
+                <div class="row download-links">
+                    <a href="@Model.Product.DownloadLink.DownloadLinkUrl" download>
+                        <img class="lazy" data-src="@Model.Product.DownloadLink.Image.ImageUrl" alt="@Model.Product.DownloadLink.Image.Title" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-6 order-lg-last">
+                <ul class="row gallery-images carousel lightgallery">
+                    @foreach (var image in Model.Product.ImageGallery)
+                    {
+                        <li data-src="@image.ImageUrl" class="product-image">
+                            <img class="lazy" data-src="@image.ImageUrl" alt="@image.Title" />
+							<div class="overlay">
+								<i class="fa fa-search-plus" aria-hidden="true"></i>
+							</div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

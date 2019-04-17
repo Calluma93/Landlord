@@ -1,0 +1,49 @@
+﻿@model Landlord.Models.Home.HomePageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+<div class="container-fluid home-page-container">
+    @Html.Partial("_Banner", Model)
+
+    <ul class="container home">
+        @foreach (var product in Model.Products)
+        {
+            <li class="home-product">
+                <a href="@product.LinkUrl">
+                    <img class="lazy" data-src="@product.HomePageImage.ImageUrl" alt="@product.HomePageImage.Title" />
+                    <div class="overlay-wrapper">
+                        <p class="product-heading">
+                            @product.ProductName
+                        </p>
+                        <p class="product-subheading">
+                            @product.SubHeading
+                        </p>
+                    </div>
+                </a>
+            </li>
+        }
+    </ul>
+
+    <ul class="container mobile-home">
+        @foreach (var product in Model.Products)
+        {
+            <li class="home-product">
+                <div class="col-12">
+                    <a href="@product.LinkUrl">
+                        <div class="overlay-wrapper">
+                            <p class="product-heading">
+                                @product.ProductName
+                            </p>
+                            <p class="product-subheading">
+                                @product.SubHeading
+                            </p>
+                        </div>
+                        <img class="lazy" data-src="@product.MobileImage.ImageUrl" alt="@product.MobileImage.Title" />
+                    </a>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

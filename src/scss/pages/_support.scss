@@ -1,0 +1,113 @@
+// ###### Support Page ###### \\
+.support-page-container {
+    padding: 0;
+    margin: 0;
+
+    .row {
+        margin: 0;
+    }
+
+    .col-12 {
+        padding: 0;
+    }
+
+    .banner {
+        position: relative;
+    
+        .desktop-banner {
+            display: none;
+    
+            @include above(770px) {
+                display: block;
+            }
+        }
+    
+        .mobile-banner {
+            display: none;
+    
+            @include below(769px) {
+                display: block;
+            }
+        }
+
+        .overlay-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            .heading {
+                font-size: 5rem;
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                height: 100%;
+                width: 100%;
+
+                @include between(1280px, 1600px) {
+                    font-size: 4rem;
+                }
+
+                @include between(962px, 1280px) {
+                    font-size: 2.5rem;
+                }
+
+                @include between(769px, 962px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .subheading {
+                font-size: 1.9rem;
+                text-align: right;
+                max-width: 71%;
+                position: absolute;
+                top: 75%;
+                left: 55%;
+                height: 100%;
+                width: 100%;
+
+                @include between(1280px, 1600px) {
+                    font-size: 1.5rem;
+                }
+
+                @include between(962px, 1280px) {
+                    font-size: 1.2rem;
+                    top: 70%;
+                }
+
+                @include between(769px, 962px) {
+                    font-size: 1rem;
+                    top: 65%;
+                }
+            }
+
+            @include below(769px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.support {
+
+    .support-product {
+        padding-bottom: 40px;
+
+        .product-info {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .support-product-image {
+            display: block;
+            text-align: center;
+        }
+
+        .download-links {
+            margin: 0 auto;
+            padding-bottom: 10px;
+        }
+    }
+}

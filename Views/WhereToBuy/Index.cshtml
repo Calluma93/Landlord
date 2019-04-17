@@ -1,0 +1,27 @@
+﻿@model Landlord.Models.WhereToBuy.WhereToBuyPageViewModel
+
+@section Meta{
+    @Html.Partial("_MetaSection", Model)
+}
+
+<div class="container-fluid where-to-buy-page-container">
+    @Html.Partial("_Banner", Model)
+
+
+    <div class="container where-to-buy">
+
+        @Html.Partial("_LineHeading", "landlord pedals are available through")
+
+        <ul class="row retailers">
+            @foreach (var retailer in Model.Retailers)
+            {
+                <li class="col-12 col-md-4">
+                    <a href="@retailer.WebsiteUrl">
+                        <img class="lazy" data-src="@retailer.Image.ImageUrl" alt="@retailer.Image.Title" />
+                    </a>
+                    <p class="cta">Click Above To Shop</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+// ###### Where To Buy Page ###### \\
+.where-to-buy-page-container {
+    padding: 0;
+    margin: 0;
+
+    .row {
+        margin: 0;
+    }
+
+    .col-12 {
+        padding: 0;
+    }
+
+    .banner {
+    
+        .desktop-banner {
+            display: none;
+    
+            @include above(769px) {
+                display: block;
+            }
+        }
+    
+        .mobile-banner {
+            display: none;
+    
+            @include below(769px) {
+                display: block;
+            }
+        }
+
+        .overlay-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            .heading {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                height: 100%;
+                width: 100%;
+                font-size: 4rem;
+
+                @include between(992px, 1405px) {
+                    font-size: 3rem;
+                }
+
+                @include between(769px, 992px) {
+                    font-size: 2rem;
+                }
+            }
+
+            .subheading {
+                position: absolute;
+                top: 65%;
+                left: 10%;
+                height: 100%;
+                width: 100%;
+                max-width: 80%;
+                font-size: 3rem;
+
+                @include between(992px, 1405px) {
+                    font-size: 2rem;
+                }
+
+                @include between(769px, 992px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        @include below(769px) {
+
+            .overlay-wrapper {
+                display: none;
+            }
+        }
+    }
+}
+
+.where-to-buy {
+
+    .retailers {
+        padding-top: 50px;
+        text-align: center;
+    }
+    .cta {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 20px;
+    }   
+}
